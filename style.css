@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
+
+header{
+    font-family: 'Acme';
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: left;
+    background: black;
+    color: white;
+    font-size: 60px;
+}
+
+li{
+    list-style-type:none;
+    font-family: 'Ubuntu Condensed';
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 30px;
+}
+
+h2{
+    font-family: 'Ubuntu Condensed';
+    padding-bottom: 20px;
+    font-size: 45px;
+}
+#more {
+    display: none;
+}
+
+#movies.id{
+    font-family: 'Acme';
+    padding: 5px;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 15px;
+}
