@@ -22,9 +22,56 @@ li{
 
 h2{
     font-family: 'Ubuntu Condensed';
-    padding-bottom: 20px;
     font-size: 45px;
+    
 }
+
+.show {
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-left: 30px;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    width: 95%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+.show::after{
+      content: '\25be';
+      float: right;
+      transform: scale(1.5);
+}
+
+.show--active::after{
+    content:'\25b4' ;
+}
+  
+  
+.content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+}
+
+
+
+#searchForMovies {
+    background-position: 10px 12px; 
+    width: 40%; 
+    font-family: 'Acme';
+    font-size: 16px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-align: left;
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+    margin-left: 50px;
+  }
+/*
 #more {
     display: none;
 }
@@ -37,3 +84,4 @@ h2{
     color: white;
     font-size: 15px;
 }
+*/
