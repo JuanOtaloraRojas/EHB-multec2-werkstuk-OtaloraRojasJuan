@@ -25,11 +25,21 @@ async function getMovies() {
   // console.log(scoreFilter);
   //}
 
-
+ 
 
   //get specific data from every array (forEach)
   let htmlString = '';
   comparedArray.forEach(movies => {
+    class Movie {
+      constructor(title,description,director,producer,release_date) {
+        this.movieTtile = title;
+        this.movieDescription = description;
+        this.movieDirector = director;
+        this.movieProducer = producer;
+        this.movieRelease_date = release_date;
+      }
+    }
+    myMovie = new Movie();
     htmlString +=
       `<div id="${movies.title}">
             <button type="button" class="show" id="${movies.title}"><h2>${movies.title}</h2></button>
@@ -82,15 +92,14 @@ async function getMovies() {
 
     //controle om te zien als de ids gelijk zijn aan de filteredMovies
     var showMovies = document.getElementsByClassName('show');
+    for (var j = 0; j < showMovies.length; j++) {
+      //console.log('Movies Titles: ', showMovies[j].id.toLocaleLowerCase());
+      if (showMovies[j].id.toLocaleLowerCase() != filteredMovies) {
+        
+        //showMovies[j].style.display = 'none'
+      } else {
 
-    for (var j = 0; j < data.length; j++) {
-      //console.log('Movies Titles: ', data[j].title);
-      for (var i = 0; i < showMovies.length; i++) {
-        if (filteredMovies == data[j].title.toLowerCase()) {
-          showMovies[i].style.display = 'none'
-        } else {
-          showMovies[i].style.display = 'block';
-        }
+        //showMovies[j].style.display = 'block'
       }
     }
   });
@@ -175,8 +184,8 @@ function addMovie(e) {
   const idTitle = e.target.id;
   console.log('Toegevoegd: ', idTitle);
   moviesCollection.add({
-    MovieTitle: idTitle,
-    Seen: true,
+  MovieTitle: idTitle,
+  Seen: true,
   });
 }
 
