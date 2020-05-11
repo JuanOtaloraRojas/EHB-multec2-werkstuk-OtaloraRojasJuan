@@ -39,7 +39,7 @@ async function getMovies() {
         this.movieRelease_date = release_date;
       }
     }
-    myMovie = new Movie();
+  
     htmlString +=
       `<div id="${movies.title}">
             <button type="button" class="show" id="${movies.title}"><h2>${movies.title}</h2></button>
